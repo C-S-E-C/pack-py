@@ -23,50 +23,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - name: create linux package(multi-files,console)
-        run: |
-          pip install pyinstaller
-          pyinstaller main.py
-      - uses: actions/upload-artifact@v4
-        with:
-          name: Linux_multi-files_console
-          path: dist/*
-      - run: rm -r dist/
-          
-      - name: create linux package(single-file,console)
-        run: |
-          pip install pyinstaller
-          pyinstaller -F main.py
+         
+      - name: create linux packages
+        run: python main.py
       - uses: actions/upload-artifact@v4
         with:
           name: Linux_single-file_console
           path: dist/*
       - run: rm -r dist/
-          
-      - name: create linux package(multi-files,windowed)
-        run: |
-          pip install pyinstaller
-          pyinstaller -w main.py
-      - uses: actions/upload-artifact@v4
-        with:
-          name: Linux_multi-files_windowed
-          path: dist/*
-      - run: rm -r dist/
-          
-      - name: create linux package(single-file,windowed)
-        run: |
-          pip install pyinstaller
-          pyinstaller -w -F main.py
-      - uses: actions/upload-artifact@v4
-        with:
-          name: Linux_single-file_windowed
-          path: dist/*
-      - run: rm -r dist/
-
-
-
-
-  # windows
   build-windows:
     # The type of runner that the job will run on
     runs-on: windows-latest
@@ -78,53 +42,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-
-      # WINDOWS
-      - name: create windows package(multi-files,console)
-        run: |
-          pip install pyinstaller
-          pyinstaller main.py
+         
+      - name: create windows packages
+        run: python main.py
       - uses: actions/upload-artifact@v4
         with:
-          name: Windows_multi-files_console
+          name: Linux_single-file_console
           path: dist/*
       - run: rm -r dist/
-          
-      - name: create windows package(single-file,console)
-        run: |
-          pip install pyinstaller
-          pyinstaller -F main.py
-      - uses: actions/upload-artifact@v4
-        with:
-          name: Windows_single-file_console
-          path: dist/*
-      - run: rm -r dist/
-          
-      - name: create windows package(multi-files,windowed)
-        run: |
-          pip install pyinstaller
-          pyinstaller -w main.py
-      - uses: actions/upload-artifact@v4
-        with:
-          name: Windows_multi-files_windowed
-          path: dist/*
-      - run: rm -r dist/
-          
-      - name: create windows package(single-file,windowed)
-        run: |
-          pip install pyinstaller
-          pyinstaller -w -F main.py
-      - uses: actions/upload-artifact@v4
-        with:
-          name: Windows_single-file_windowed
-          path: dist/*
-      - run: rm -r dist/
-
-
-
-
-      
-# macos
   build-macos:
     # The type of runner that the job will run on
     runs-on: macos-latest
@@ -136,42 +61,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - name: create macos package(multi-files,console)
-        run: |
-          pip install pyinstaller
-          pyinstaller main.py
+         
+      - name: create macos packages
+        run: python main.py
       - uses: actions/upload-artifact@v4
         with:
-          name: macos_multi-files_console
-          path: dist/*
-      - run: rm -r dist/
-          
-      - name: create macos package(single-file,console)
-        run: |
-          pip install pyinstaller
-          pyinstaller -F main.py
-      - uses: actions/upload-artifact@v4
-        with:
-          name: macos_single-file_console
-          path: dist/*
-      - run: rm -r dist/
-          
-      - name: create macos package(multi-files,windowed)
-        run: |
-          pip install pyinstaller
-          pyinstaller -w main.py
-      - uses: actions/upload-artifact@v4
-        with:
-          name: macos_multi-files_windowed
-          path: dist/*
-      - run: rm -r dist/
-          
-      - name: create macos package(single-file,windowed)
-        run: |
-          pip install pyinstaller
-          pyinstaller -w -F main.py
-      - uses: actions/upload-artifact@v4
-        with:
-          name: macos_single-file_windowed
+          name: Linux_single-file_console
           path: dist/*
       - run: rm -r dist/

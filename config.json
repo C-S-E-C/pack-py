@@ -1,0 +1,32 @@
+{
+  "linux":{
+    "console":{
+      "singlefile":false,
+      "multifile":false
+    },
+    "windowed":{
+      "singlefile":true,
+      "multifile":false
+    }
+  },
+  "mac":{
+    "console":{
+      "singlefile":false,
+      "multifile":false
+    },
+    "windowed":{
+      "singlefile":true,
+      "multifile":false
+    }
+  },
+  "win":{
+    "console":{
+      "singlefile":false,
+      "multifile":false
+    },
+    "windowed":{
+      "singlefile":true,
+      "multifile":false
+    }
+  }
+}
