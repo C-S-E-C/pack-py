@@ -21,7 +21,7 @@
   },
   "win":{
     "console":{
-      "singlefile":false,
+      "singlefile":true,
       "multifile":false
     },
     "windowed":{
