@@ -1,21 +1,21 @@
 {
   "linux":{
     "console":{
-      "singlefile":false,
+      "singlefile":true,
       "multifile":false
     },
     "windowed":{
-      "singlefile":true,
+      "singlefile":false,
       "multifile":false
     }
   },
   "mac":{
     "console":{
-      "singlefile":false,
+      "singlefile":true,
       "multifile":false
     },
     "windowed":{
-      "singlefile":true,
+      "singlefile":false,
       "multifile":false
     }
   },
@@ -25,7 +25,7 @@
       "multifile":false
     },
     "windowed":{
-      "singlefile":true,
+      "singlefile":false,
       "multifile":false
     }
   }
